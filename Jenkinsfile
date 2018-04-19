@@ -10,7 +10,7 @@ pipeline {
     stage('Install Common') {
       steps {
         sh 'cd project/common/; mvn clean install'
-        sh 'ls -l /home/ubuntu/.m2/repository/io/github/stefanosbou/common/1.0-SNAPSHOT'
+        sh 'ls -l /home/ubuntu/.m2'
       }
     }
     stage('Build Api Server') {
