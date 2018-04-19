@@ -7,12 +7,19 @@ pipeline {
 
   }
   stages {
-    stage('Build') {
+    stage('Install Common') {
       steps {
         sh 'cd project/common/; mvn clean install'
-        sh 'cat /home/ubuntu/.m2/settings.xml'
-        sh 'cd project/api-server/; mvn clean package -U '
-        sh 'cd project/aggregator/; mvn clean package -U '
+      }
+    }
+    stage('Build Api Server') {
+      steps {
+        sh 'cd project/api-server/; mvn clean package'
+      }
+    }
+    stage('Build Aggregator') {
+      steps {
+        sh 'cd project/aggregator/; mvn clean package'
       }
     }
   }
