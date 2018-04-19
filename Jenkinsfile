@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''cd /home/ubuntu/development/currency-fair/dashboard-with-spark-streaming/projects/common
+        sh '''cd /home/ubuntu/development/currency-fair/dashboard-with-spark-streaming/project/common
 ; mvn clean install'''
       }
     }
