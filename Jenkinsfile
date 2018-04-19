@@ -11,6 +11,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'cd project/common/; mvn clean install'
+        sh 'cd project/api-server/; mvn clean package'
+        sh 'cd project/aggregator/; mvn clean package'
       }
     }
   }
