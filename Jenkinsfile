@@ -10,8 +10,8 @@ pipeline {
     stage('Build') {
       steps {
         pwd(tmp: true)
-        sh 'pwd -P'
-        sh 'echo $Tmp'
+        sh 'cd project/common'
+        sh 'mvn clean install'
       }
     }
   }
