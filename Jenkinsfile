@@ -9,7 +9,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        pwd(tmp: true)
         sh 'pwd -P'
+        sh 'echo $Tmp'
       }
     }
   }
