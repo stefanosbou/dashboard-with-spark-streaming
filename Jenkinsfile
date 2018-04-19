@@ -1,15 +1,15 @@
 pipeline {
   agent {
     docker {
-      image 'ubuntu'
-      args '-p 3000:3000'
+      image 'maven:3-alpine'
+      args '''-p 3000:3000
+-v /root/.m2:/root/.m2'''
     }
 
   }
   stages {
     stage('Build') {
       steps {
-        pwd(tmp: true)
         sh 'cd project/common'
         sh 'mvn clean install'
       }
