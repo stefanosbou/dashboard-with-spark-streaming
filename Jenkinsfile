@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pwd -P; mvn clean install'
+        sh 'll $(pwd -P)'
       }
     }
   }
