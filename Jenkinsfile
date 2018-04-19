@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'll $(pwd -P)'
+        sh 'pwd -P'
       }
     }
   }
