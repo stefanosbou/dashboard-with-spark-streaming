@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'cd project/common/; mvn clean install'
-        sh 'cat ~/.m2/settings.xml'
+        sh 'cat /home/ubuntu/.m2/settings.xml'
         sh 'cd project/api-server/; mvn clean package -U '
         sh 'cd project/aggregator/; mvn clean package -U '
       }
