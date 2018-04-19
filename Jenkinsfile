@@ -10,8 +10,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cd project/common;pwd -P'
-        sh 'mvn clean install'
+        sh 'cd project/common/; mvn clean install'
       }
     }
   }
