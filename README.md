@@ -43,13 +43,13 @@ The user dashboard also offers the `/token` path, where the user can get a valid
 ## Live Example
 
 **Real-time dashboard:**
-`http://ec2-52-15-82-23.us-east-2.compute.amazonaws.com/`
+~~`http://ec2-52-15-82-23.us-east-2.compute.amazonaws.com/`~~
 
 **Endpoint to get a valid token:**
-`http://ec2-52-15-82-23.us-east-2.compute.amazonaws.com/token`
+~~`http://ec2-52-15-82-23.us-east-2.compute.amazonaws.com/token`~~
 
 **Endpoint to post the JSON data:**
-`http://ec2-52-15-82-23.us-east-2.compute.amazonaws.com/api/orders`
+~~`http://ec2-52-15-82-23.us-east-2.compute.amazonaws.com/api/orders`~~
 
 example POST request:
 ```
